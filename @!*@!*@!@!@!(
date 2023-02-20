@@ -6,6 +6,8 @@ getgenv().Key = "Q"
 getgenv().Smoothness = true
 getgenv().SmoothnessAmount = 15
 getgenv().PredictMovement = true
+getgenv().Resolver = true
+
 
 -- SILENT AIM SETTINGS
 
@@ -1367,4 +1369,46 @@ elseif getgenv().PredictMovement == false then
         Camera.CFrame = CF(Camera.CFrame.p, AimlockTarget.Character[getgenv().AimPart].Position)
 
 end
+end
+
+
+
+
+
+
+
+
+
+if getgenv().Resolver == true then
+--// Configuration
+local velocity = Vector3.new(0, 0, 0) -- Change this vector to set the desired velocity
+local reverse = false -- Change this to true to reverse the velocity
+
+--// Main Script
+while true do
+for _, player in ipairs(game:GetService("Players"):GetPlayers()) do
+local character = player.Character
+if character then
+local humanoid = character:FindFirstChildOfClass("Humanoid")
+if humanoid then
+local rootPart = humanoid.RootPart
+if reverse then
+rootPart.Velocity = -velocity
+else
+rootPart.Velocity = velocity
+end
+end
+end
+end
+wait(.1) -- Change this to set the desired update frequency
+end
+
+--[[
+Notes:
+- This script will continuously apply the specified velocity to all humanoid player characters in the game.
+- The "velocity" variable can be set to any desired Vector3 value.
+- The "reverse" variable can be set to true to reverse the direction of the velocity.
+- The "wait" function at the end of the loop controls the update frequency of the script. Lower values will result in higher performance but higher resource usage, while higher values will result in lower performance but lower resource usage.
+- This script can be modified to include additional features, such as random velocity or velocity limits, to make it even more advanced.
+]]
 end
