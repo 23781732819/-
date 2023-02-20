@@ -7,6 +7,8 @@ getgenv().Smoothness = true
 getgenv().SmoothnessAmount = 15
 getgenv().PredictMovement = true
 getgenv().Resolver = true
+getgenv().antilock = true
+
 
 
 -- SILENT AIM SETTINGS
@@ -1411,4 +1413,76 @@ Notes:
 - The "wait" function at the end of the loop controls the update frequency of the script. Lower values will result in higher performance but higher resource usage, while higher values will result in lower performance but lower resource usage.
 - This script can be modified to include additional features, such as random velocity or velocity limits, to make it even more advanced.
 ]]
+end
+
+
+
+if getgenv().antilock == true then
+getgenv().VelocityChanger = true
+getgenv().Velocity = Vector3.new(200,0,200)
+getgenv().Key = "z"
+
+
+local NotifyLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))()
+local Notify = NotifyLibrary.Notify
+
+
+--// main scapt | realkscapter... omg
+local Players     = game:GetService("Players")
+local RunService  = game:GetService("RunService")
+
+local LocalPlayer = Players.LocalPlayer
+local Character   = LocalPlayer.Character
+local RootPart    = Character:FindFirstChild("HumanoidRootPart")
+
+local Heartbeat, RStepped, Stepped = RunService.Heartbeat, RunService.RenderStepped, RunService.Stepped
+
+LocalPlayer.CharacterAdded:Connect(function(NewCharacter)
+   Character = NewCharacter
+end)
+
+local RVelocity, YVelocity = nil, 0.1
+
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+mouse.KeyDown:Connect(
+    function(key)
+        if key == getgenv().Key then
+            if getgenv().VelocityChanger == false then
+                Notify({
+                    Title = "AA",
+                    Description = "ON",
+                    Duration = 1.4
+                    })
+                getgenv().VelocityChanger = true
+            else
+                Notify({
+                    Title = "AA",
+                    Description = "OFF",
+                    Duration = 1.4
+                    })
+                getgenv().VelocityChanger = false
+            end
+        end
+    end
+)
+
+while true do
+   if VelocityChanger then
+       --// this a dumb check asnilsadsa
+       if (not RootPart) or (not RootPart.Parent) or (not RootPart.Parent.Parent) then
+           RootPart = Character:FindFirstChild("HumanoidRootPart")
+       else
+           RVelocity = RootPart.Velocity
+   
+           RootPart.Velocity = type(Velocity) == "vector" and Velocity or Velocity(RVelocity)
+       
+           RStepped:wait()
+       
+           RootPart.Velocity = RVelocity
+       end
+   end
+   
+   Heartbeat:wait()
+end
 end
