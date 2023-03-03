@@ -19,7 +19,7 @@ getgenv().SilentVisibleCheck = true
 getgenv().SilentAimPart = "UpperTorso"
 getgenv().SilentAimFOVSize = 16
 getgenv().SilentHitChance = 110 -- Anything Under "80" Is Legit, Anything Over "100" Is Not Legit.
-getgenv().SilentPrediction = 0.13237 -- Depends On Ping.
+getgenv().SilentPrediction = 0.092 -- Depends On Ping.
 
 
 
