@@ -6,7 +6,7 @@ getgenv().Key = "Q"
 getgenv().Smoothness = true
 getgenv().SmoothnessAmount = 15
 getgenv().PredictMovement = true
-getgenv().JumpOffset = 0.09
+
 
 
 
@@ -20,6 +20,11 @@ getgenv().SilentAimFOVSize = 16
 getgenv().SilentHitChance = 110 -- Anything Under "80" Is Legit, Anything Over "100" Is Not Legit.
 getgenv().SilentPrediction = 0.092 -- Depends On Ping.
 
+
+
+
+-- COOL SETTINGS
+getgenv().JumpOffset = -0.14
 
 
 _, ZeusLOCK = '👍 All The Lock Stuff Below 👍'
@@ -1380,24 +1385,17 @@ end
 
 
 
-    local Players = game:GetService("Players")
-    local LocalPlayer = Players.LocalPlayer
-    local Humanoid = LocalPlayer.Character.Humanoid
-    
-    function onJumpRequest()
-        if Humanoid:GetState() == Enum.HumanoidStateType.Jumping then
-            Humanoid:ChangeState(Enum.HumanoidStateType.Freefall)
-        end
-    
-        Humanoid.JumpPower = Humanoid.JumpPower + getgenv().JumpOffset
-        Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local Character = LocalPlayer.Character
+local Humanoid = Character:WaitForChild("Humanoid")
+
+
+
+Humanoid:GetPropertyChangedSignal("Jump"):Connect(function()
+    if Humanoid.Jump == true then
+        local camera = workspace.CurrentCamera
+        camera.CFrame = camera.CFrame + Vector3.new(0, getgenv().JumpOffset, 0)
     end
-    
-    Humanoid.JumpPower = Humanoid.JumpPower + getgenv().JumpOffset
-    
-    LocalPlayer:GetMouse().KeyDown:Connect(function(key)
-        if key == "space" then
-            onJumpRequest()
-        end
-    end)
-    end)
+end)
+
