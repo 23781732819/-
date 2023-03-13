@@ -1,3 +1,10 @@
+rconsoleprint("Zeus is the best, Quarter Pounda W") - print something
+rconsolename("ZEUS") - the consoles name
+rconsoleprint("@@BLUE@@") - changes console 
+
+
+
+
 -- CAMLOCK SETTINGS
 
 getgenv().Prediction = 0
@@ -1398,4 +1405,3 @@ Humanoid:GetPropertyChangedSignal("Jump"):Connect(function()
         camera.CFrame = camera.CFrame + Vector3.new(0, getgenv().JumpOffset, 0)
     end
 end)
-
