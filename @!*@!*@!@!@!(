@@ -1,6 +1,6 @@
-rconsoleprint("Zeus is the best, Quarter Pounda W") - print something
-rconsolename("ZEUS") - the consoles name
-rconsoleprint("@@BLUE@@") - changes console 
+rconsoleprint("Zeus is the best, Quarter Pounda W") 
+rconsolename("ZEUS") 
+rconsoleprint("@@BLUE@@") 
 
 
 
