@@ -28,6 +28,37 @@ rconsoleprint("@@BLUE@@")
 
 
 
+game.StarterGui:SetCore("SendNotification", {
+Title = "QuarterPounnder"; -- the title (ofc)
+Text = "Loading, - Security at it's finest"; -- what the text says (ofc)
+Icon = "rbxassetid://42201317"; -- the image if u want. 
+Duration = 2; -- how long the notification should in secounds
+})
+
+game.StarterGui:SetCore("SendNotification", {
+Title = "QuarterPounnder"; -- the title (ofc)
+Text = "Almost done..., - Security at it's finest"; -- what the text says (ofc)
+Icon = "rbxassetid://42201317"; -- the image if u want. 
+Duration = 2; -- how long the notification should in secounds
+})
+
+game.StarterGui:SetCore("SendNotification", {
+Title = "QuarterPounnder"; -- the title (ofc)
+Text = "Loaded, - Security at it's finest"; -- what the text says (ofc)
+Icon = "rbxassetid://42201317"; -- the image if u want. 
+Duration = 2; -- how long the notification should in secounds
+})
+
+
+
+game.StarterGui:SetCore("SendNotification", {
+Title = "QuarterPounnder"; -- the title (ofc)
+Text = "Have fun fr, - Security at it's finest"; -- what the text says (ofc)
+Icon = "rbxassetid://42201317"; -- the image if u want. 
+Duration = 2; -- how long the notification should in secounds
+})
+
+
 -- CAMLOCK SETTINGS
 
 getgenv().Prediction = 0
