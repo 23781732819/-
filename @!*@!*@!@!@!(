@@ -1,6 +1,29 @@
-rconsoleprint("Zeus is the best, Quarter Pounda W") 
-rconsolename("ZEUS") 
-rconsoleprint("@@BLUE@@") 
+rconsoleprint([[________    ____ ___   _____  __________ ________________________________     __________ ________    ____ ___ _______   ________   _____________________  
+\_____  \  |    |   \ /  _  \ \______   \\_   _____/\__    ___/\______   \    \______   \\_____  \  |    |   \\      \  \______ \  \_   _____/\______   \ 
+ /  / \  \ |    |   //  /_\  \ |       _/ |    __)_   |    |    |       _/     |     ___/ /   |   \ |    |   //   |   \  |    |  \  |    __)_  |       _/ 
+/   \_/.  \|    |  //    |    \|    |   \ |        \  |    |    |    |   \     |    |    /    |    \|    |  //    |    \ |    `   \ |        \ |    |   \ 
+\_____\ \_/|______/ \____|__  /|____|_  //_______  /  |____|    |____|_  /     |____|    \_______  /|______/ \____|__  //_______  //_______  / |____|_  / 
+       \__>                 \/        \/         \/                    \/                        \/                  \/         \/         \/         \/  
+                                                                                                                                                          ]])
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+rconsoleprint([[
+ZEUS IS PRO 
+KEYBIND: Q 
+PRED: 0.092
+JUMPOFFSET: -0.14
+PART: UPPERTORSO
+LEGIT: HELL NAW
+BLATANT: HELL YEA
+ZEUSISPRO: HELL YEA BABY]])
+
+rconsoleprint("@@BLUE@@")
+
+rconsolename("ZEUS")
+
+rconsoleprint("@@BLUE@@")
 
 
 
