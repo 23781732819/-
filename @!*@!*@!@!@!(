@@ -1,10 +1,13 @@
-rconsoleprint([[________    ____ ___   _____  __________ ________________________________     __________ ________    ____ ___ _______   ________   _____________________  
-\_____  \  |    |   \ /  _  \ \______   \\_   _____/\__    ___/\______   \    \______   \\_____  \  |    |   \\      \  \______ \  \_   _____/\______   \ 
- /  / \  \ |    |   //  /_\  \ |       _/ |    __)_   |    |    |       _/     |     ___/ /   |   \ |    |   //   |   \  |    |  \  |    __)_  |       _/ 
-/   \_/.  \|    |  //    |    \|    |   \ |        \  |    |    |    |   \     |    |    /    |    \|    |  //    |    \ |    `   \ |        \ |    |   \ 
-\_____\ \_/|______/ \____|__  /|____|_  //_______  /  |____|    |____|_  /     |____|    \_______  /|______/ \____|__  //_______  //_______  / |____|_  / 
-       \__>                 \/        \/         \/                    \/                        \/                  \/         \/         \/         \/  
-                                                                                                                                                          ]])
+rconsoleprint([[ 8888888888',8888' 8 8888888888   8 8888      88    d888888o.   
+        ,8',8888'  8 8888         8 8888      88  .`8888:' `88. 
+       ,8',8888'   8 8888         8 8888      88  8.`8888.   Y8 
+      ,8',8888'    8 8888         8 8888      88  `8.`8888.     
+     ,8',8888'     8 888888888888 8 8888      88   `8.`8888.    
+    ,8',8888'      8 8888         8 8888      88    `8.`8888.   
+   ,8',8888'       8 8888         8 8888      88     `8.`8888.  
+  ,8',8888'        8 8888         ` 8888     ,8P 8b   `8.`8888. 
+ ,8',8888'         8 8888           8888   ,d8P  `8b.  ;8.`8888 
+,8',8888888888888  8 888888888888    `Y88888P'    `Y8888P ,88P' ]])
                                                                                                                                                       
                                                                                                                                                       
                                                                                                                                                       
@@ -30,32 +33,32 @@ rconsoleprint("@@BLUE@@")
 
 game.StarterGui:SetCore("SendNotification", {
 Title = "QuarterPounnder"; -- the title (ofc)
-Text = "Loading, - Security at it's finest"; -- what the text says (ofc)
+Text = "Loading"; -- what the text says (ofc)
 Icon = "rbxassetid://42201317"; -- the image if u want. 
-Duration = 2; -- how long the notification should in secounds
+Duration = 5; -- how long the notification should in secounds
 })
 
 game.StarterGui:SetCore("SendNotification", {
 Title = "QuarterPounnder"; -- the title (ofc)
-Text = "Almost done..., - Security at it's finest"; -- what the text says (ofc)
+Text = "Almost done..."; -- what the text says (ofc)
 Icon = "rbxassetid://42201317"; -- the image if u want. 
-Duration = 2; -- how long the notification should in secounds
+Duration = 5; -- how long the notification should in secounds
 })
 
 game.StarterGui:SetCore("SendNotification", {
 Title = "QuarterPounnder"; -- the title (ofc)
-Text = "Loaded, - Security at it's finest"; -- what the text says (ofc)
+Text = "Loaded."; -- what the text says (ofc)
 Icon = "rbxassetid://42201317"; -- the image if u want. 
-Duration = 2; -- how long the notification should in secounds
+Duration = 5; -- how long the notification should in secounds
 })
 
 
 
 game.StarterGui:SetCore("SendNotification", {
 Title = "QuarterPounnder"; -- the title (ofc)
-Text = "Have fun fr, - Security at it's finest"; -- what the text says (ofc)
+Text = "Have fun fr"; -- what the text says (ofc)
 Icon = "rbxassetid://42201317"; -- the image if u want. 
-Duration = 2; -- how long the notification should in secounds
+Duration = 5; -- how long the notification should in secounds
 })
 
 
